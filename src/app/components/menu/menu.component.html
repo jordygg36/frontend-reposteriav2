@@ -1,0 +1,65 @@
+<div class="carousel-container">
+  <button class="carousel-button prev" (click)="prevSlide()">&#10094;</button>
+  <div class="carousel">
+    <div class="carousel-item" *ngFor="let product of products; let i = index" [class.active]="i === currentSlide">
+      <div class="product-card">
+        <img [src]="'http://localhost:5000/uploads/' + product.imagen" alt="{{ product.nombre }}" class="product-image">
+        <div class="product-info">
+          <h3 class="product-title">{{ product.nombre }}</h3>
+          <p class="product-price">{{ product.precio | currency }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-button next" (click)="nextSlide()">&#10095;</button>
+</div>
+
+<!-- Section for product cards -->
+<h1>Productos disponibles</h1>
+<div class="productos-container">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="card-header">
+      <img [src]="'http://localhost:5000/uploads/' + product.imagen" alt="{{ product.nombre }}" class="product-image">
+    </div>
+    <div class="card-body">
+      <h3 class="product-title2">{{ product.nombre }}</h3>
+      <p class="product-description">{{ product.descripcion }}</p>
+      <div class="product-footer">
+        <p class="product-price2">{{ product.precio | currency }}</p>
+        <p class="product-date">{{ product.fecha_creacion | date:'short' }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- About Us Section -->
+<section class="about-us">
+  <div class="about-us-container">
+    <h2 class="about-us-title">Sobre Nosotros</h2>
+    <p class="about-us-text">
+      Bienvenido a <strong>Marketplace</strong>, tu destino en línea para descubrir y adquirir productos únicos y de alta calidad. 
+      Nuestra misión es conectar a vendedores y compradores en un entorno seguro y confiable, ofreciendo una experiencia de compra excepcional.
+    </p>
+    <p class="about-us-text">
+      Fundado en 2023, <strong>Marketplace</strong> comenzó como un pequeño proyecto con el objetivo de empoderar a los emprendedores locales. 
+      Hoy, somos una comunidad vibrante de vendedores apasionados y compradores satisfechos.
+    </p>
+    <p class="about-us-text">
+      Nos enorgullece ofrecer una plataforma que prioriza la transparencia, la innovación y la satisfacción del cliente. 
+      Gracias por ser parte de nuestra historia. ¡Esperamos que disfrutes tu experiencia en <strong>Marketplace</strong>!
+    </p>
+  </div>
+</section>
+
+<!-- AI Chat Section -->
+<section class="ai-chat-section">
+  <div class="ai-chat-container">
+    <h2 class="ai-chat-title">¿Necesitas ayuda?</h2>
+    <p class="ai-chat-text">
+      Nuestro asistente de inteligencia artificial está aquí para ayudarte. Haz clic en el botón de abajo para iniciar una conversación.
+    </p>
+    <button class="ai-chat-button" routerLink="/ai-chat">
+      <i class="fas fa-robot"></i> Iniciar AI Chat
+    </button>
+  </div>
+</section>

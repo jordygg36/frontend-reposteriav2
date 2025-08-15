@@ -1,0 +1,29 @@
+<div class="edit-product-container">
+  <h2>Editar Producto</h2>
+  <form (ngSubmit)="onUpdate()">
+    <div class="input-container">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" [(ngModel)]="product.nombre" name="nombre" required />
+    </div>
+    <div class="input-container">
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" [(ngModel)]="product.descripcion" name="descripcion" required></textarea>
+    </div>
+    <div class="input-container">
+      <label for="precio">Precio</label>
+      <input type="text" id="precio" [(ngModel)]="product.precio" name="precio" required />
+    </div>
+    <div class="input-container">
+      <label for="fecha_creacion">Fecha de Creación</label>
+      <input type="date" id="fecha_creacion" [(ngModel)]="product.fecha_creacion" name="fecha_creacion" required />
+    </div>
+    <div class="input-container">
+      <label for="imagen">Imagen</label>
+      <input type="file" id="imagen" (change)="onFileSelected($event)" />
+      <img *ngIf="previewUrl" [src]="previewUrl" alt="Imagen del producto" class="product-preview" />
+    </div>
+    <div class="success-message" *ngIf="successMessage">{{ successMessage }}</div>
+    <div class="error-message" *ngIf="errorMessage">{{ errorMessage }}</div>
+    <button type="submit">Actualizar Producto</button>
+  </form>
+</div>

@@ -1,0 +1,35 @@
+<div *ngIf="user">
+    <h2>Perfil de {{ user.nombre }} {{ user.apellido }}</h2>
+    <div class="profile-image">
+      <img [src]="user.imagen" alt="Foto de perfil">
+    </div>
+  
+    <table>
+      <tr>
+        <th>ID Usuario</th>
+        <td>{{ user.idusuarios }}</td>
+      </tr>
+
+      <tr>
+        <th>Nombre</th>
+        <td>{{ user.nombre }}</td>
+      </tr>
+      <tr>
+        <th>Apellido</th>
+        <td>{{ user.apellido }}</td>
+      </tr>
+      <tr>
+        <th>Dirección</th>
+        <td>{{ user.direccion }}</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>{{ user.email }}</td>
+      </tr>
+      <tr>
+        <th>Contraseña</th>
+        <td>********</td>
+      </tr>
+    </table>
+    <button (click)="editUser(user.idusuarios)">Editar Perfil</button>
+  </div>

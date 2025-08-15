@@ -1,0 +1,11 @@
+<form (ngSubmit)="addProduct()">
+  <h2>Crear Producto</h2>
+  
+  <input type="text" [(ngModel)]="newProduct.nombre" name="nombre" placeholder="Nombre del Producto" required>
+  <input type="text" [(ngModel)]="newProduct.descripcion" name="descripcion" placeholder="Descripción" required>
+  <input type="text" [(ngModel)]="newProduct.precio" name="precio" placeholder="Precio" required>
+  <input type="date" [(ngModel)]="newProduct.fecha_creacion" name="fecha_creacion" placeholder="Fecha de Actualización" required>
+  <input type="file" (change)="onFileSelected($event)" name="imagen" accept="image/*">
+  <img *ngIf="previewUrl" [src]="previewUrl" alt="Vista previa de la imagen" style="max-width: 200px; max-height: 200px;">
+  
+  <button type="submit">Crear Producto</button>

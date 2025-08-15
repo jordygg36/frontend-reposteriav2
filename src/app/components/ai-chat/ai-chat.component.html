@@ -1,0 +1,12 @@
+<div class="ai-chat-container">
+  <h2>Consulta sobre productos</h2>
+  <textarea [(ngModel)]="userQuery" placeholder="Escribe tu pregunta aquí..."></textarea>
+  <button (click)="askAI()">Preguntar</button>
+  <div *ngIf="aiResponse" class="ai-response">
+    <h3>Respuesta de la IA:</h3>
+    <p>{{ aiResponse }}</p>
+  </div>
+  <div *ngIf="errorMessage" class="error-message">
+    <p>{{ errorMessage }}</p>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #f4f4f9;
+    background-color: #121212;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 25px;
+}
+
+h3, h4, h5 {
+    color: #bb86fc;
+    font-size: 40px;
+}
+
+.content-section {
+    background: #2c2c2c;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.comment-box {
+    background: #333;
+    padding: 15px;
+    border-left: 4px solid #bb86fc;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.comment-box strong {
+    color: #bb86fc;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #f4f4f9;
+}
+
+.form-control {
+    background: #444;
+    color: #f4f4f9;
+    border: 1px solid #555;
+}
+
+.form-control:focus {
+    background: #555;
+    color: #f4f4f9;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #bb86fc, #3700b3);
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #3700b3, #bb86fc);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px auto;
+}
+
+.menu-item {
+    border: 1px solid #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background: #2c2c2c;
+    border-radius: 5px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #f4f4f9;
+}
+
+.menu-item a:hover {
+    color: #bb86fc;
+}
+
+.index {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.index ul {
+    list-style: none;
+    padding: 0;
+}
+
+.index ul li {
+    margin: 5px 0;
+}
+
+.index ul li a {
+    text-decoration: none;
+    color: #bb86fc;
+}
+
+.index ul li a:hover {
+    text-decoration: underline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.typing-effect {
+    border-right: .15em solid #bb86fc;
+    white-space: nowrap;
+    overflow: hidden;
+}

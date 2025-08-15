@@ -1,0 +1,24 @@
+<div class="ventas-container">
+  <h2>Resumen de Compra</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items">
+        <td>{{ item.producto }}</td>
+        <td>{{ item.cantidad }}</td>
+        <td>{{ item.precio_unitario | currency }}</td>
+        <td>{{ item.cantidad * item.precio_unitario | currency }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Total: {{ total | currency }}</p>
+  <button (click)="generateInvoice()">Generar Factura</button>
+  <button *ngIf="invoiceId" (click)="downloadInvoice(invoiceId)">Descargar Factura</button>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Buscar usuarios..." [(ngModel)]="searchQuery" (input)="filterUsers()" />
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Usuario</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Dirección</th>
+                    <th>Email</th>
+                    <th>RFC</th>
+                    <th>Imagen</th>
+                    <th>Acciones</th> 
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of filteredUsers">
+                    <td>{{item.idusuarios}}</td>
+                    <td>{{item.nombre}}</td>
+                    <td>{{item.apellido}}</td>
+                    <td>{{item.direccion}}</td>
+                    <td>{{item.email}}</td>
+                    <td>{{item.rfc}}</td>
+                    <td><img [src]="'http://localhost:5000/uploads/' + item.imagen" alt="Foto de perfil"></td>
+                    <td>
+                        <button (click)="editUser(item.idusuarios)">Editar</button>
+                        <button (click)="deleteUser(item.idusuarios)">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+        <button (click)="addUser()">Añadir Usuario</button>
+    </div>
+</body>
+</html>
+

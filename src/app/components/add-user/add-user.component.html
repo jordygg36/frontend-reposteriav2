@@ -1,0 +1,22 @@
+<form (ngSubmit)="addUser()">
+  <h1 style="background-color: #50ADBF; color: #ffffff; padding: 0.5rem; border-radius: 8px;">Agregar Usuario</h1>
+  <p style="background-color: #FDDA76; color: #19384A; padding: 0.5rem; border-radius: 8px;">Complete los campos para agregar un nuevo usuario.</p>
+
+  <input type="text" [(ngModel)]="newUser.nombre" name="nombre" placeholder="Nombre" required>
+  <input type="text" [(ngModel)]="newUser.apellido" name="apellido" placeholder="Apellido" required>
+  <input type="text" [(ngModel)]="newUser.rfc" name="rfc" placeholder="RFC" required>
+  <input type="email" [(ngModel)]="newUser.email" name="email" placeholder="Email" required>
+  <input type="text" [(ngModel)]="newUser.direccion" name="direccion" placeholder="Dirección" required>
+  <input type="text" [(ngModel)]="newUser.idrol" name="idrol" placeholder="ID ROL" required>
+  <input type="date" [(ngModel)]="newUser.fecha_creacion" name="fecha_creacion" placeholder="Fecha" required>
+  <input type="password" [(ngModel)]="newUser.password" name="password" placeholder="Contraseña" required>
+  <input type="file" (change)="onFileSelected($event)" name="imagen" accept="image/*">
+  
+  <div class="image-preview">
+    <img *ngIf="previewUrl" [src]="previewUrl" alt="Vista previa de la imagen">
+  </div>
+  
+  <button type="submit">
+    <i class="fas fa-user-plus"></i> Agregar Usuario
+  </button>
+</form>

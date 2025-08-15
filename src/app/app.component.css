@@ -1,0 +1,213 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #19384A; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Adjust based on the navbar height */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #ffffff; /* Fondo blanco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    width: 98%; /* Full width of the browser */
+    background-color: #50ADBF; /* Dark blue background */
+    color: white; /* White text */
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: white; /* Amarillo */
+    font-size: 1.3rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+nav a:hover,
+nav a.active {
+    background: #E76168; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+}
+
+button {
+    padding: 10px 15px;
+    background: #E76168; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+}
+
+button:hover {
+    background: #C0392B; /* Dark red on hover */
+}
+
+.menu-link a {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between the icon and text */
+    text-decoration: none;
+    color: inherit;
+}
+
+.menu-link a:hover {
+    color: #50ADBF; /* Change color on hover */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #50ADBF; /* Dark blue */
+  color: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #FDDA76; /* Yellow */
+}
+
+.footer-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #FDDA76; /* Yellow */
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #FDDA76; /* Yellow */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  border-top: 1px solid #ffffff33; /* Semi-transparent white */
+  padding-top: 10px;
+}
+
+/* Welcome Message Styling */
+.welcome-message {
+    background-color: #f9f9f9; /* Light gray background */
+    color: #19384A; /* Dark text */
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px auto;
+    max-width: 600px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem; /* Smaller font size */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.welcome-message h4 {
+    font-size: 1rem; /* Slightly larger than the base font size */
+    font-weight: 500; /* Medium weight for a clean look */
+    margin: 0;
+    line-height: 1.4;
+}
+
+.welcome-message h4 span {
+    color: #50ADBF; /* Subtle blue for role */
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    button {
+        align-self: center;
+    }
+}
+

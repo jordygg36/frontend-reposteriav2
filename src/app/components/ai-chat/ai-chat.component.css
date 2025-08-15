@@ -1,0 +1,45 @@
+.ai-chat-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 15px;
+  background: #50ADBF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #19384A;
+}
+
+.ai-response {
+  margin-top: 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-left: 4px solid #50ADBF;
+}
+
+.error-message {
+  color: #E76168; /* Red for errors */
+  font-size: 1rem;
+  margin-top: 10px;
+}

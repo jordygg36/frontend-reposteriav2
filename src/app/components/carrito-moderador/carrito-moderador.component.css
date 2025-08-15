@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #19384A; 
+    margin: 0;
+    padding: 0;
+}
+
+.cart-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #ffffff;
+    color: #19384A; 
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #50ADBF; 
+    margin-bottom: 20px;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid #E76168; /* Rojo */
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    text-align: left;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cart-table th, .cart-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-table th {
+    background-color: #50ADBF; /* Azul */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cart-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.cart-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.cart-image {
+    width: 100px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.cart-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.cart-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #19384A; /* Texto oscuro */
+}
+
+.cart-price {
+    font-size: 1.1rem;
+    color: #E76168; /* Rojo */
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Botón de eliminar */
+.remove-button {
+    padding: 5px 10px;
+    background: #E76168; /* Rojo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.remove-button:hover {
+    background: #C0392B; /* Rojo oscuro */
+}
+
+.remove-button:disabled {
+    background-color: #E76168; /* Rojo claro */
+    cursor: not-allowed;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cart-image {
+        margin-bottom: 10px;
+    }
+}

@@ -1,0 +1,82 @@
+.ventas-container {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  color: #19384A;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.search-container input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px 10px 40px; /* Add padding for the icon */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-container input[type="text"]:focus {
+  border-color: #50ADBF; /* Blue border on focus */
+  box-shadow: 0 0 5px rgba(80, 173, 191, 0.5);
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px; /* Position the icon inside the input */
+  font-size: 1.2rem;
+  color: #888; /* Gray color for the icon */
+  pointer-events: none; /* Prevent the icon from blocking input clicks */
+}
+
+.ventas-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 1rem;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ventas-table th, .ventas-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+.ventas-table th {
+  background-color: #50ADBF;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ventas-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.ventas-table tr:hover {
+  background-color: #f1f1f1;
+}

@@ -1,0 +1,115 @@
+<div class="container">
+  <form (ngSubmit)="onUpdate()" #userForm="ngForm">
+    <h1 style="background-color: #50ADBF; color: #ffffff; padding: 0.5rem; border-radius: 8px;">Editar Usuario</h1>
+
+    <!-- ID Usuario (No editable) -->
+    <div class="form-group">
+      <label for="idusuarios">ID Usuario</label>
+      <input type="text" id="idusuarios" [(ngModel)]="user.idusuarios" name="idusuarios" readonly />
+    </div>
+
+    <!-- Rol -->
+    <div class="form-group">
+      <label for="idrol">Rol</label>
+      <input type="text" id="idrol" [(ngModel)]="user.idrol" name="idrol" readonly/>
+    </div>
+
+    <!-- Nombre -->
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input
+        type="text"
+        id="nombre"
+        [(ngModel)]="user.nombre"
+        name="nombre"
+        required
+        minlength="3"
+        maxlength="50"
+        #nombre="ngModel"
+      />
+      <div *ngIf="nombre.invalid && nombre.touched" class="error">
+        El nombre debe tener entre 3 y 50 caracteres.
+      </div>
+    </div>
+
+    <!-- Apellido -->
+    <div class="form-group">
+      <label for="apellido">Apellido</label>
+      <input
+        type="text"
+        id="apellido"
+        [(ngModel)]="user.apellido"
+        name="apellido"
+        required
+        minlength="3"
+        maxlength="50"
+        #apellido="ngModel"
+      />
+      <div *ngIf="apellido.invalid && apellido.touched" class="error">
+        El apellido debe tener entre 3 y 50 caracteres.
+      </div>
+    </div>
+
+    <!-- Dirección -->
+    <div class="form-group">
+      <label for="direccion">Dirección</label>
+      <input
+        type="text"
+        id="direccion"
+        [(ngModel)]="user.direccion"
+        name="direccion"
+        required
+        minlength="5"
+        maxlength="100"
+        #direccion="ngModel"
+      />
+      <div *ngIf="direccion.invalid && direccion.touched" class="error">
+        La dirección debe tener al menos 5 caracteres.
+      </div>
+    </div>
+
+    <!-- Email -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+        #email="ngModel"
+      />
+      <div *ngIf="email.invalid && email.touched" class="error">
+        Ingrese un email válido.
+      </div>
+    </div>
+
+    <!-- Imagen de perfil -->
+    <div class="form-group">
+      <label for="imagen">Foto de perfil</label>
+      <input type="file" id="imagen" (change)="onFileSelected($event)" />
+      <img *ngIf="previewUrl" [src]="previewUrl" alt="Vista previa" class="preview-img" />
+    </div>
+
+    <!-- Contraseña -->
+    <div class="form-group">
+      <label for="contrasena">Contraseña</label>
+      <input
+        type="password"
+        id="contrasena"
+        [(ngModel)]="user.password"
+        name="contrasena"
+        required
+        #contrasena="ngModel"
+      />
+      <div *ngIf="contrasena.invalid && contrasena.touched" class="error">
+        La contraseña debe tener entre 6 y 20 caracteres.
+      </div>
+    </div>
+
+    <button type="submit" [disabled]="userForm.invalid" style="background-color: #E76168; color: #ffffff; padding: 0.8rem; border-radius: 6px;">
+      Actualizar Usuario
+    </button>
+  </form>
+</div>

@@ -1,0 +1,144 @@
+/* Estilo general para el perfil */
+div {
+    background: #ffffff; /* Fondo blanco */
+    color: #19384A; /* Texto oscuro */
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 750px;
+    margin: 40px auto;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid #50ADBF; /* Azul */
+    transition: all 0.3s ease;
+}
+
+div:hover {
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #50ADBF; /* Azul */
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 3px solid #E76168; /* Rojo */
+    padding-bottom: 10px;
+    font-style: italic;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    background: #FDDA76; /* Fondo amarillo */
+    color: #19384A; /* Texto oscuro */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Encabezados de la tabla */
+th {
+    background: #50ADBF; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #E76168; /* Rojo */
+}
+
+/* Celdas de la tabla */
+td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #E76168; /* Rojo */
+}
+
+tr:nth-child(even) {
+    background: #ffffff; /* Fondo blanco */
+}
+
+tr:hover {
+    background: #E76168; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Botón de edición */
+button {
+    padding: 10px 15px;
+    background: #50ADBF; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background: #19384A; /* Azul oscuro */
+}
+
+button:active {
+    background-color: #E76168; /* Rojo */
+    transform: translateY(1px);
+}
+
+/* Adaptación para dispositivos móviles */
+@media (max-width: 600px) {
+    div {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    table {
+        margin-bottom: 20px;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 14px;
+    }
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #19384A; /* Texto oscuro */
+    background-color: #FDDA76; /* Fondo amarillo */
+    margin: 0;
+    padding: 0;
+}
+
+/* Imagen de perfil */
+.profile-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #50ADBF; /* Azul */
+    margin: 20px auto;
+    display: block;
+}

@@ -1,0 +1,131 @@
+body {
+  font-family: 'Poppins';
+  color: #19384A; /* Texto oscuro */
+  background-color: #FDDA76; /* Fondo amarillo */
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins';
+}
+
+h1 {
+  text-align: center;
+  color: #19384A;
+}
+
+.subtitle {
+  text-align: center;
+  color: #888;
+  margin-bottom: 20px;
+}
+
+/* Resumen de actividad */
+.dashboard-summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  flex: 1;
+  background: #F9F9F9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summary-card h3 {
+  color: #50ADBF; /* Azul */
+  margin-bottom: 10px;
+}
+
+.summary-card p {
+  color: #19384A; /* Texto oscuro */
+  font-size: 1rem;
+}
+
+/* Links section */
+.dashboard-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.dashboard-links a {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #50ADBF; /* Azul */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.dashboard-links a:hover {
+  background: #19384A; /* Azul oscuro */
+  transform: translateY(-3px);
+}
+
+/* Botón de cerrar sesión */
+.logout-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #E76168; /* Rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: #C0392B;
+  transform: translateY(-3px);
+}
+
+/* Pantalla de token expirado */
+.expired-container {
+  text-align: center;
+  padding: 20px;
+  background: #F9F9F9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.expired-container h1 {
+  color: #E76168; /* Rojo */
+}
+
+.expired-container p {
+  color: #888;
+  margin-bottom: 20px;
+}
+
+.login-btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #50ADBF; /* Azul */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background: #19384A; /* Azul oscuro */
+  transform: translateY(-3px);
+}

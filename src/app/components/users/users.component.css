@@ -1,0 +1,154 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #19384A; /* Texto oscuro */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+/* Estilos para la tabla */
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #ffffff; /* Fondo blanco */
+    color: #19384A; /* Texto oscuro */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #E76168; /* Rojo */
+}
+
+th {
+    background: #50ADBF; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background: #FDDA76; /* Amarillo */
+}
+
+tr:hover {
+    background: #E76168; /* Rojo */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Estilos para el formulario */
+form {
+    width: 90%;
+    max-width: 420px;
+    margin: 2rem auto;
+    padding: 1.8rem;
+    background-color: #ffffff;
+    border-radius: 12px; /* Bordes más suaves */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Efecto al pasar el mouse */
+}
+
+input, button, select {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border: 1px solid #7ba1ff;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #f5f9ff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #2962ff;
+    background-color: #ffffff;
+    outline: none;
+}
+
+button {
+    padding: 10px 15px;
+    background: #50ADBF; /* Azul */
+    color: #ffffff; /* Texto blanco */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #19384A; /* Azul oscuro */
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+button + button {
+    margin-left: 10px;
+}
+
+/* Media Queries para adaptabilidad */
+@media (max-width: 600px) {
+    table {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 1.2rem;
+    }
+
+    input, button, select {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+}
+
+/* Estilos para la imagen */
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #50ADBF; /* Azul */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el contenedor */
+div.centered-container {
+    width: 90%;
+    max-width: 550px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+div.centered-container:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Efecto al pasar el mouse */
+}
+div.centered-container:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); /* Efecto al pasar el mouse */
+}

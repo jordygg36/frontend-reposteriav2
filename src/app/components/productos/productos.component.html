@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="productos-container">
+    <div class="product-card" *ngFor="let item of arrayProducts">
+      <div class="card-header">
+        <td><img [src]="'http://localhost:5000/uploads/' + item.imagen" alt="Foto de perfil"></td>
+      </div>
+      <div class="card-body">
+        <h3 class="product-title">{{item.nombre}}</h3>
+        <p class="product-description">{{item.descripcion}}</p>
+        <div class="product-footer">
+          <p class="product-price">{{item.precio | currency}}</p>
+          <p class="product-date">{{item.fecha_creacion | date:'short'}}</p>
+        </div>
+      </div>
+      <div class="card-actions">
+        <form (ngSubmit)="addCarrito(item.idproductos)">
+          <input type="hidden" name="idproductos" [value]="item.idproductos"/>
+          <button type="submit" [disabled]="!isAuthenticated" class="buy-button">Comprar</button>
+        </form>
+        <p *ngIf="!isAuthenticated" class="auth-message">Inicia sesión para comprar</p>
+      </div>
+    </div>
+  
+  
+</div>
+  
+</body>
+</html>

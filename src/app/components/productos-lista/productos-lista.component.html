@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+<body>
+
+<div class="productos-container">
+    <!-- Search Bar -->
+    <div class="search-container">
+        <div class="search-bar">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Buscar productos..." [(ngModel)]="searchQuery" (input)="filterProducts()" />
+        </div>
+        <button class="add-button" (click)="addProduct()">Agregar Producto</button>
+    </div>
+
+    <!-- Product Table -->
+    <table class="productos-table">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+                <th>Fecha de Creación</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of filteredProducts">
+                <td><img [src]="'http://localhost:5000/uploads/' + item.imagen" alt="Foto de perfil" class="product-image"></td>
+                <td>{{item.nombre}}</td>
+                <td>{{item.descripcion}}</td>
+                <td>{{item.precio | currency}}</td>
+                <td>{{item.fecha_creacion | date:'short'}}</td>
+                <td>
+                    <button class="edit-button" (click)="editProduct(item.idproductos)">Editar</button>
+                    <button class="delete-button" (click)="deleteProduct(item.idproductos)">Eliminar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

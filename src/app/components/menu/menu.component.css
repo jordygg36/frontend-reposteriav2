@@ -1,0 +1,210 @@
+/* Carousel container */
+.carousel-container {
+  width: 100%;
+  position: relative;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* Carousel */
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel item */
+.carousel-item {
+  flex: 0 0 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  display: none;
+ 
+}
+
+.carousel-item.active {
+  opacity: 1;
+  display: block;
+}
+
+/* Product cards container */
+.productos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+/* Product card */
+.product-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* Product image */
+.product-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Product info */
+.product-info {
+  padding: 15px;
+   background: #E76168;
+}
+
+.product-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white; /* Dark text */
+}
+.product-title2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #50ADBF; /* Dark text */
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: #555; /* Gray text */
+  margin: 10px 0;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.product-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white; /* Blue */
+}
+.product-price2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #E76168; /* Blue */
+}
+
+.product-date {
+  font-size: 0.9rem;
+  color: #999; /* Light gray */
+}
+
+/* Navigation buttons */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* About Us Section */
+.about-us {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 40px 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-us-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #19384A; /* Dark text */
+  margin-bottom: 20px;
+}
+
+.about-us-text {
+  font-size: 1rem;
+  color: #555; /* Gray text */
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.about-us-text strong {
+  color: #50ADBF; /* Blue for emphasis */
+}
+
+/* AI Chat Section */
+.ai-chat-section {
+  background-color: #F9F9F9; /* Light gray background */
+  padding: 40px 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ai-chat-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ai-chat-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #19384A; /* Dark text */
+  margin-bottom: 20px;
+}
+
+.ai-chat-text {
+  font-size: 1rem;
+  color: #555; /* Gray text */
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.ai-chat-button {
+  padding: 10px 20px;
+  background: #50ADBF; /* Blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ai-chat-button:hover {
+  background: #19384A; /* Dark blue */
+}

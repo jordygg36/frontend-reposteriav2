@@ -1,0 +1,36 @@
+<div class="ventas-container">
+  <h2>Lista de Ventas Realizadas</h2>
+
+  <!-- Search Bar -->
+  <div class="search-container">
+    <i class="fas fa-search search-icon"></i>
+    <input type="text" placeholder="Buscar ventas..." [(ngModel)]="searchQuery" (input)="filterVentas()" />
+  </div>
+
+  <table class="ventas-table">
+    <thead>
+      <tr>
+        <th>ID Factura</th>
+        <th>Usuario</th>
+        <th>Producto</th>
+        <th>Cantidad</th>
+        <th>Precio Unitario</th>
+        <th>Subtotal</th>
+        <th>Total</th>
+        <th>Fecha</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let venta of filteredVentas">
+        <td>{{ venta.idfactura }}</td>
+        <td>{{ venta.usuario }}</td>
+        <td>{{ venta.producto }}</td>
+        <td>{{ venta.cantidad }}</td>
+        <td>{{ venta.precio_unitario | currency }}</td>
+        <td>{{ venta.subtotal | currency }}</td>
+        <td>{{ venta.total | currency }}</td>
+        <td>{{ venta.fecha | date:'short' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

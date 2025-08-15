@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+  
+  <title>Marketplace</title>
+</head>
+<body>
+  <div class="" *ngIf="isAuthenticated">
+    <nav>
+      <ul>
+        <li><a routerLink="/dashboard"><i class="fas fa-chart-line"></i>Dashboard</a></li>
+        
+        <li><a *ngIf="userRole === 1" routerLink="/usuario"><i class="fas fa-users"></i>Usuarios</a></li>
+        <li><a *ngIf="userRole === 2" routerLink="/ventas-lista"><i class="fas fa-shopping-cart"></i>Lista de Ventas</a></li>
+        <li><a *ngIf="userRole === 2" routerLink="/carrito-moderador"><i class="fas fa-list"></i>Gestion de Carritos</a></li>
+        <li><a *ngIf="userRole === 3" routerLink="/carrito-compras"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+        <li><a *ngIf="userRole === 3" routerLink="/productos"><i class="fas fa-box"></i>Productos</a></li>
+        <li><a *ngIf="userRole === 1 || userRole === 2" routerLink="/productos-lista"><i class="fas fa-boxes"></i>Lista de productos</a></li>
+        <li><a *ngIf="userId" routerLink="/perfil"><i class="fas fa-user"></i>Perfil</a></li>
+        <li><a *ngIf="userRole === 1 || userRole === 3 || userRole === 2" routerLink="/ai-chat"><i class="fas fa-robot"></i>AI Chat</a></li>
+      </ul>
+      <button (click)="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar sesión</button>
+    </nav>
+  </div>
+  
+  <div *ngIf="!isAuthenticated" class="content-section">
+    <nav>
+      <ul>
+        <li class="menu-link">
+          <a routerLink="/menu">
+            <i class="fas fa-home"></i> Menu
+          </a>
+        </li>
+        <li><a routerLink="/productos-invitado"><i class="fas fa-box"></i> Productos</a></li>
+        <li><a routerLink="/ai-chat"><i class="fas fa-robot"></i> AI Chat</a></li>
+        <li><a routerLink="/login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="welcome-message">
+  <h4 *ngIf="isAuthenticated">Bienvenido {{ userRole === 1 ? 'Administrador' : userRole === 2 ? 'Moderador' : userRole === 3 ? 'Usuario' : '' }}, {{ userName }}.</h4>
+</div>
+  <router-outlet></router-outlet>
+  
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>Marketplace</h3>
+      <p>Tu destino en línea para productos únicos y de alta calidad.</p>
+    </div>
+    <div class="footer-section"  *ngIf="!isAuthenticated">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a routerLink="/menu">Inicio</a></li>
+        <li><a routerLink="/productos-invitado">Productos</a></li>
+        <li><a routerLink="/login">Iniciar Sesión</a></li>
+        <li><a routerLink="/register">Registrarse</a></li>
+      </ul>
+    </div>
+    <div class="footer-section" *ngIf="!isAuthenticated || userRole === 1">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a routerLink="/usuarios">Lista de Usuarios</a></li>
+        <li><a routerLink="/productos-lista">Productos</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-section" *ngIf="!isAuthenticated || userRole === 2">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a routerLink="/carrito-compras">Carrito de Compras</a></li>
+        <li><a routerLink="/productos-lista">Productos</a></li>
+        
+      </ul>
+    </div>
+    <div class="footer-section">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Marketplace. Todos los derechos reservados.</p>
+  </div>
+</footer>
+</body>
+</html>

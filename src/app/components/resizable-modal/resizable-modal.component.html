@@ -1,0 +1,12 @@
+<div class="modal-overlay" (click)="closeModal()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Resizable Modal</h2>
+      <button class="close-button" (click)="closeModal()">×</button>
+    </div>
+    <div class="modal-body">
+      <p>Contenido de la ventana modal.</p>
+    </div>
+    <div class="resize-handle" (mousedown)="startResizing($event)"></div>
+  </div>
+</div>
