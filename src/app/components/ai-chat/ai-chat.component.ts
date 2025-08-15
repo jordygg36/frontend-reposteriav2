@@ -23,7 +23,7 @@ export class AIChatComponent {
       return;
     }
 
-    this.http.post<{ response: string }>('http://localhost:5000/ai/query', { query: this.userQuery }).subscribe({
+    this.http.post<{ response: string }>('https://backend-reposteria-2r9n.onrender.com/ai/query', { query: this.userQuery }).subscribe({
       next: (response) => {
         this.aiResponse = response.response;
         this.errorMessage = ''; // Clear any previous error message
