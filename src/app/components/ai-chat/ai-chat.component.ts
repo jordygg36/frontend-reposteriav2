@@ -30,7 +30,7 @@ export class AIChatComponent {
       },
       error: (error) => {
         console.error('Error al obtener la respuesta de la IA:', error);
-        this.errorMessage = 'Hubo un problema al obtener la respuesta de la IA. Por favor, inténtalo más tarde.';
+        this.errorMessage = error.error?.message || 'Hubo un problema al obtener la respuesta de la IA. Por favor, inténtalo más tarde.';
       }
     });
   }
