@@ -78,7 +78,7 @@ export class UsuarioService {
 
   getUserDetails(userId: string): Observable<any> {
     console.log('Fetching user details for ID:', userId); // Log the user ID
-    return this.http.get<any>(`http://localhost:5000/usuarios/details/${userId}`);
+    return this.http.get<any>(`https://backend-reposteria-2r9n.onrender.com/usuarios/details/${userId}`);
   }
 }
 

@@ -11,7 +11,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root',
 })
 export class AuthService {
-  private apiUrl = `http://localhost:5000/login`;  
+  private apiUrl = `https://backend-reposteria-2r9n.onrender.com/login`;  
   private isAuthenticatedSubject = new BehaviorSubject<boolean>(false);
   isAuthenticated$ = this.isAuthenticatedSubject.asObservable();
 

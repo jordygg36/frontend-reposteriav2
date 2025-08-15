@@ -8,8 +8,8 @@ import { map } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class ProductosService {
-  private URL = 'http://localhost:5000/productos';
-  private URL2 = 'http://localhost:5000/carrito'; 
+  private URL = 'https://backend-reposteria-2r9n.onrender.com/productos';
+  private URL2 = 'https://backend-reposteria-2r9n.onrender.com/carrito';
 
   constructor(private http: HttpClient, private authService: AuthService) {}
 
@@ -21,7 +21,7 @@ export class ProductosService {
     return this.http.get<any>(this.URL, { headers: this.getAuthHeaders() }).pipe( 
       map(products => {
         if(products.imagen) {
-          products.imagen = `http://localhost:5000/uploads/${products.imagen}`         
+          products.imagen = `https://backend-reposteria-2r9n.onrender.com/uploads/${products.imagen}`         
         }
         return products;
       })
@@ -60,7 +60,7 @@ export class ProductosService {
     return this.http.get<any>(`${this.URL}/${idproductos}`, { headers: this.getAuthHeaders() }).pipe(
       map(product => {
         if (product.imagen) {
-          product.imagen = `http://localhost:5000/uploads/${product.imagen}`          
+          product.imagen = `https://backend-reposteria-2r9n.onrender.com/uploads/${product.imagen}`          
         }
         return product;
       })
@@ -69,7 +69,7 @@ export class ProductosService {
 
   generateInvoice(invoiceData: any): Observable<any> {
     const headers = this.authService.getAuthHeaders(); // Include authorization headers
-    return this.http.post('http://localhost:5000/factura', invoiceData, { headers });
+    return this.http.post('https://backend-reposteria-2r9n.onrender.com/factura', invoiceData, { headers });
   }
 
   updateCarritoCantidad(item: any): Observable<any> {
